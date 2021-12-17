@@ -20,14 +20,41 @@ function Product() {
             </div>
             <div className={styles.right}>
                 <h1 className={styles.title}>{pizza.name}</h1>
-                <span className={styles.price} >$ {pizza.price[0]}</span>
+                <span className={styles.price} >$ {pizza.price[size]}</span>
                 <p className={styles.desc}>{pizza.desc}</p>
                 <h3 className={styles.choose}>Chose your size</h3>
                 <div className={styles.sizes}>
-                    <div className={styles.size}>
+                    <div className={styles.size} onClick={()=> setSize(0)}>
                         <Image src='/img/size.png' alt='' layout='fill'  />
                         <span className={styles.number}>small</span>
                     </div>
+                    <div className={styles.size} onClick={()=> setSize(1)}>
+                        <Image src='/img/size.png' alt='' layout='fill'  />
+                        <span className={styles.number}>Medium</span>
+                    </div>
+                    <div className={styles.size} onClick={()=> setSize(2)}>
+                        <Image src='/img/size.png' alt='' layout='fill'  />
+                        <span className={styles.number}>Large</span>
+                    </div>
+                </div>
+                <h3 className={styles.choose}>Choose additional ingredient</h3>
+                <div className={styles.ingredients}>
+                    <div className={styles.option}>
+                        <input type="checkbox" id='double' name='double' className={styles.checkbox} />
+                        <label htmlFor="double">Double Ingredients</label>
+                    </div>
+                    <div className={styles.option}>
+                        <input type="checkbox" id='cheese' name='cheese' className={styles.checkbox} />
+                        <label htmlFor="cheese">Cheese Ingredients</label>
+                    </div>
+                    <div className={styles.option}>
+                        <input type="checkbox" id='spicy' name='spicy' className={styles.checkbox} />
+                        <label htmlFor="spicy">Spicy Ingredients</label>
+                    </div>
+                </div>
+                <div className={styles.add}>
+                    <input type="number" defaultValue={1} className={styles.quantity}/>
+                    <button className={styles.button}>Add To Cart</button>
                 </div>
             </div>
         </div>
