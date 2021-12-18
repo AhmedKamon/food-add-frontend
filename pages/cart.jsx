@@ -6,7 +6,7 @@ function Cart() {
         <div className={styles.container}>
             <div className={styles.left}>
                 <table className={styles.table}>
-                    <tr className={styles.tr}>
+                    <tr className={styles.trTitle}>
                         <th>Product</th>
                         <th>Name</th>
                         <th>Extras</th>
@@ -14,8 +14,8 @@ function Cart() {
                         <th>Quabtity</th>
                         <th>Total</th>
                     </tr>
-                    <tr>
-                        <td>
+                    <tr className={styles.tr}>
+                        <td >
                             <div className={styles.imgContainer}>
                                 <Image src='/img/pizza.png' alt='' layout='fill' objectFit='cover' />
                             </div>
@@ -36,7 +36,7 @@ function Cart() {
                            <span className={styles.total}>$19.90</span>
                         </td>
                     </tr>
-                    <tr>
+                    <tr className={styles.tr}>
                         <td>
                             <div className={styles.imgContainer}>
                                 <Image src='/img/pizza.png' alt='' layout='fill' objectFit='cover' />
